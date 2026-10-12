@@ -1,0 +1,80 @@
+---
+---
+
+@import "minima";
+
+/* 전체 레이아웃 */
+.site-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+/* 왼쪽 카테고리 */
+.sidebar {
+  position: sticky;
+  top: 24px;
+  padding-right: 20px;
+  border-right: 1px solid #e5e5e5;
+  font-size: 14px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.category-tree,
+.category-tree ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.category-tree li {
+  margin: 8px 0;
+}
+
+.category-tree ul {
+  padding-left: 16px;
+}
+
+.category-tree summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.category-tree a {
+  text-decoration: none;
+}
+
+.category-tree a:hover {
+  text-decoration: underline;
+}
+
+.category-tree span {
+  color: #888;
+  font-size: 12px;
+}
+
+/* 오른쪽 게시글 */
+.main-content {
+  min-width: 0;
+}
+
+/* 모바일에서는 사이드바를 위쪽에 표시 */
+@media screen and (max-width: 700px) {
+  .site-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .sidebar {
+    position: static;
+    padding-right: 0;
+    padding-bottom: 16px;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}

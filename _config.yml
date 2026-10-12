@@ -1,3 +1,9 @@
 title: My Blog
 description:
 theme: minima
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
